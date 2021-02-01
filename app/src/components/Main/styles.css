@@ -1,0 +1,21 @@
+.Main__cans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    height: 100vh;
+}
+
+.Main__bottom{
+    position: absolute;
+
+    display: flex;
+    justify-self: center;
+
+    width: 104%;
+
+    bottom: 0%;
+    right: 0;
+    left: 0;
+}
