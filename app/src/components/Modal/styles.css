@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
+
+.Modal__container {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+    
+    z-index: 1000;
+}
+
+.Modal__left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 70vw;
+    height: 100vh;
+    
+    background-color: #222A30;
+}
+
+.Modal__wrapperInfo{
+    margin-left: 5%;
+}
+
+.Modal__wrapperInfo h2{
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;;
+    font-weight: lighter;
+    font-size: 4rem;
+
+    color: white;
+    user-select: none;
+}
+
+.Modal__wrapperInfo strong {
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;;
+    font-weight: bold;
+    font-size: 4.5rem;
+
+    color: red;
+    user-select: none;
+}
+
+.Modal__wrapperInfo p {
+    width: 500px;
+    margin: 8% 0 5% 0;
+
+    font-family: 'Roboto', sans-serif;;
+    font-weight: normal;
+    font-size: 1.2rem;
+
+    color: white;
+}
+
+.Modal__exceptions li{
+    font-family: 'Roboto', sans-serif;;
+    font-weight: lighter;
+    font-size: 1.1rem;
+
+    color: white;
+}
+
+.Modal__right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 30vw;
+    height: 100vh;
+
+    background-color: #628862;
+}
+
+.Modal__right button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 80px;
+
+    margin: 0 5% 0 1%;
+
+    border-radius: 100px;
+
+    outline: none;
+    border-width: 5px;
+    border-color: #222A30;
+    
+    background-color: #FFC629;
+    cursor: pointer;
+}

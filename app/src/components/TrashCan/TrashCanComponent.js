@@ -3,9 +3,18 @@ import './styles.css';
 
 import recicle from '../../assets/recicle.svg';
 
-export default function TrashCanComponent({canColor = 'transparent', stripColor = 'transparent'}){
+export default function TrashCanComponent({
+    canColor = 'transparent', 
+    stripColor = 'transparent', 
+    height, width, marginTop, marginLeft,
+    onClick = () => {}})
+    {
     return(
-        <div className="TrashCan__Wrapper">
+        <div 
+            className="TrashCan__Wrapper" 
+            onClick={onClick}
+            style={{height: height, width: width, marginTop: marginTop, marginLeft: marginLeft}}
+        >
             <div 
                 className="TrashCan__CoverWrapper"
                 style={{backgroundColor: canColor}}
