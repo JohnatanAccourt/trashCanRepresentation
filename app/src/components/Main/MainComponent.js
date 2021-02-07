@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TrashCanComponent from '../TrashCan/TrashCanComponent';
-// import FooterComponent from './components/Footer/FooterComponent';
+import ModalComponent from '../Modal/ModalComponent';
 
 import ArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Location from '@material-ui/icons/LocationOn';
@@ -11,34 +11,53 @@ import { IoLogoLinkedin } from 'react-icons/io';
 
 import SVG from '../../assets/bottom.svg';
 
+import cans from '../../consts/list.json';
+
 import './styles.css';
 
-export default function MainComponent({onClick}){
+export default function MainComponent(){
+    const [modal, setModal] = useState(false);
+    const [item, setItem] = useState({});
+
+    function handleModal(can){
+        setModal(true);
+        setItem(can);
+    }
+
+    function nextCan(){
+        const result = cans.filter(index => index.name === item.next);
+        console.log(result);
+        setItem(result[0]);
+    }
+
     return(
         <div>
+            {modal ?
+                <ModalComponent 
+                    onClick={() => nextCan()}
+                    closeModal={() => setModal(false)}
+                    can={item}
+                    trashColor={item.name}
+                    description={item.description}
+                    exceptions={item.cannotThrow}
+                    stripColor={item.stripColor}
+                    canColor={item.canColor}
+                />:
+                <></>
+            }
             <div className="Main__content">
                 <h1>Afinal, o que significa cada cor?</h1>
                 <section className="Main__cans">
-                    <TrashCanComponent 
-                        onClick={onClick} 
-                        height={340} width={220} marginTop={100} 
-                        canColor='#903733' stripColor='#732C32' 
-                    />
-                    <TrashCanComponent 
-                        onClick={onClick} 
-                        height={340} width={220} marginTop={100}
-                        canColor='#396F50' stripColor='#1B5131' 
-                    />
-                    <TrashCanComponent 
-                        onClick={onClick} 
-                        height={340} width={220} marginTop={100}
-                        canColor='#E2C031' stripColor='#D4AE32' 
-                    />
-                    <TrashCanComponent 
-                        onClick={onClick} 
-                        height={340} width={220} marginTop={100}
-                        canColor='#145AA8' stripColor='#0A3361'
-                    />
+                    {cans.map((can, key) => {
+                        return (
+                            <TrashCanComponent 
+                                key={key}
+                                onClick={() => handleModal(can)} 
+                                height={300} width={200} marginTop={100} 
+                                canColor={can.canColor} stripColor={can.stripColor}
+                            />
+                        )
+                    })}
                 </section>
                 <section className="Main__sugestion4user">
                     <ArrowUp style={{color: '#FFC629', fontSize: '3rem'}} />

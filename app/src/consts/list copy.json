@@ -82,5 +82,80 @@
             "https://a-static.mlcdn.com.br/618x463/papel-off-set-63g-a4-embalagem-com-010-folhas-phandora/phandoravarejopapeiseireli/815/554007eb135f4009961f77725e403412.jpg",
             "https://img.mfrural.com.br/api/image?url=https://s3.amazonaws.com/mfrural-produtos-us/351960-352741-1927945-chapa-de-papelao-ondulado-para-arrumacao-de-palet.jpg&width=480&height=288&mode=4"
         ]
+    },
+    {
+        "id": 5,
+        "name": "Preto",
+        "next": "Laranja",
+        "canColor": "#111",
+        "stripColor": "#000",
+        "description": "Essa lixeira você pode depositar APENAS modeira",
+        "throwable": [
+            "https://img.elo7.com.br/product/zoom/2A7446C/kit-10-ripas-madeira-pinus-crua-artesanato-45-cm-x-5-cm-ripas-madeira-pinus-crua-artesanato.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Laranja",
+        "next": "Branco",
+        "canColor": "#111",
+        "stripColor": "#000",
+        "description": "Essa lixeira você pode depositar resíduos perigosos",
+        "throwable": [
+            "https://a-static.mlcdn.com.br/618x463/bateria-de-carro-moura-60ah-12v-polo-positivo/adelmo/969051f47a9511ea98ce4201ac18501e/59568d33f55099432b529ab005793581.jpg",
+            "https://lojaespacoinfo.com.br/wp-content/uploads/2018/08/Pilhas-panasonic-aa-600x600.jpg",
+            "https://cdn.awsli.com.br/300x300/141/141756/produto/4148838/cb3d2ad072.jpg",
+            "https://conteudo.imguol.com.br/c/entretenimento/f8/2017/12/05/remedio-1512486171679_v2_450x450.jpg",
+            "http://paintshow.com.br/img/posts/rfilemanager/latas-de-tintas.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Branco",
+        "next": "Roxo",
+        "canColor": "#f2f2f2",
+        "stripColor": "#999",
+        "description": "Essa lixeira você pode depositar resíduos hospitalares",
+        "throwable": [
+            "https://www.portalbueno.com.br/uploads/cache/16-03-2018-045849-480-690x460-1486db12-portalbueno.webp",
+            "https://drogariasp.vteximg.com.br/arquivos/ids/172317-1000-1000/7891463006455.JPG.jpg?v=635651395746570000",
+            "https://static.drogarianet.com.br/media/product/a92/luvas-cirurgicas-de-latex-n-7-5-esteril-061.jpg",
+            "https://http2.mlstatic.com/D_NQ_NP_850412-MLB31054819402_062019-O.jpg",
+            "https://tocadocuruja.files.wordpress.com/2010/05/98341704.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Roxo",
+        "next": "Marrom",
+        "canColor": "#111",
+        "stripColor": "#000",
+        "description": "Essa lixeira você pode depositar apenas resíduos radioativos como: lixo radioativo biológico, rejeitos líquidos, gasosos, sólidos e etc"
+    },
+    {
+        "id": 8,
+        "name": "Marrom",
+        "next": "Cinza",
+        "canColor": "#111",
+        "stripColor": "#000",
+        "description": "Essa lixeira você pode depositar apenas resíduos orgânicos",
+        "throwable": [
+            "https://www.translix.com.br/wp-content/uploads/2020/04/unnamed.jpg",
+            "https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia14027/compostagem-lixo-organico-artigos-cursos-cpt.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Cinza",
+        "next": "Vermelho",
+        "canColor": "#999",
+        "stripColor": "#555",
+        "description": "Essa lixeira você pode depositar apenas resíduos não reciclável",
+        "throwable": [
+            "https://lh3.googleusercontent.com/proxy/OxkFb9gSKbq0lgJoLzIMDaxCUcoPjq52YWgLS4lIJAJYf3l4_J9-4sk1O9OpVbX9OalZOQ0BKHqaFeu7gIuAeyDsgE_SfF5CYXiYcqRkNDBYOC0RdMOZqUZbT0O-Eje1kkL1",
+            "https://telhanorte.vteximg.com.br/arquivos/ids/300526-NaN-NaN/Suporte-para-rolo-de-papel-higienico-com-ventosas-aco-cromado-Arthi.jpg?v=636645292494600000",
+            "https://degam.com.br/wp-content/uploads/2018/12/PAPEL-TOALHA-iStock-521037284.jpg",
+            "https://images.freeimages.com/images/large-previews/74e/cigarette-butt-1309819.jpg"
+        ]
     }
 ]
