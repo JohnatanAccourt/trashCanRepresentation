@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './styles.css';
 
 import TrashCanComponent from '../TrashCan/TrashCanComponent';
@@ -6,7 +6,7 @@ import TrashCanComponent from '../TrashCan/TrashCanComponent';
 import ArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Close from '@material-ui/icons/Close';
 
-import cans from '../../consts/list.json';
+import cans from '../../consts/totalList.json';
 
 export default function ModalComponent(
     {
@@ -17,26 +17,21 @@ export default function ModalComponent(
         exceptions,
         stripColor,
         canColor,
-        can
+        can,
+        images
     }
 ){
-    // const [canItem, setCan] = useState({});
+    const [canItem, setCan] = React.useState([]);
 
-    // useEffect(() => {
-    //     nextCanPreview();
-    // },[])
-    
-    // function nextCanPreview(){
-    //     const result = cans.filter(index => index.name === can.next);
-    //     console.log(result[0]);
-    //     setCan(result[0]);
-    //     console.log(canItem);
-    // }
+    React.useEffect(() => {
+        const result = cans.filter(index => index.name === can.next);
+        setCan(result[0]);
+    },[canColor])
 
     return(
         <div className="Modal__container">
             <Close onClick={closeModal} style={{color: 'white', fontSize: '4rem', position: 'absolute', top: 5, right: 5}} />
-            <section className="Modal__left">
+            <article className="Modal__left">
                 <TrashCanComponent
                     height={700} width={450} marginLeft={-120}
                     canColor={canColor} stripColor={stripColor}
@@ -56,15 +51,23 @@ export default function ModalComponent(
                             )
                         })}
                     </ul>
+
+                    {images.length !== 0 ? <small>Pode jogar Resíduos como:</small> : <small>Não possui exemplo</small>}
+
+                    <section className="Modal__canThrow">
+                        {images.map((index, key) => {
+                            return(<img className="Modal__images" key={key} src={index} alt="imgs with sugestions" />)
+                        })}
+                    </section>
                 </div>
-            </section>
+            </article>
             <section className="Modal__right">
-                <button onClick={onClick}>
-                    <ArrowRight style={{color: '#222A30', fontSize: '5rem'}} />
+                <button onClick={onClick} style={{ backgroundColor: canItem.canColor }}>
+                    <ArrowRight style={{color: 'white', fontSize: '5rem'}} />
                 </button>
                 <TrashCanComponent
                     height={200} width={120}
-                    canColor='#732C32' stripColor='#732C32'
+                    canColor={canItem.canColor} stripColor={canItem.stripColor}
                 />
             </section>
         </div>

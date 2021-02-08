@@ -11,7 +11,7 @@ import { IoLogoLinkedin } from 'react-icons/io';
 
 import SVG from '../../assets/bottom.svg';
 
-import cans from '../../consts/list.json';
+import cans from '../../consts/totalList.json';
 
 import './styles.css';
 
@@ -19,14 +19,15 @@ export default function MainComponent(){
     const [modal, setModal] = useState(false);
     const [item, setItem] = useState({});
 
+    const apresentationalCans = cans.slice(0,4);
+
     function handleModal(can){
         setModal(true);
         setItem(can);
     }
-
+    
     function nextCan(){
         const result = cans.filter(index => index.name === item.next);
-        console.log(result);
         setItem(result[0]);
     }
 
@@ -42,13 +43,14 @@ export default function MainComponent(){
                     exceptions={item.cannotThrow}
                     stripColor={item.stripColor}
                     canColor={item.canColor}
+                    images={item.throwable}
                 />:
                 <></>
             }
             <div className="Main__content">
                 <h1>Afinal, o que significa cada cor?</h1>
                 <section className="Main__cans">
-                    {cans.map((can, key) => {
+                    {apresentationalCans.map((can, key) => {
                         return (
                             <TrashCanComponent 
                                 key={key}

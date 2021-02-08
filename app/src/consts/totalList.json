@@ -23,7 +23,7 @@
     {
         "id": 2,
         "name": "Verde",
-        "next": "Amarelo",
+        "next": "Amarela",
         "canColor": "#396F50",
         "stripColor": "#1B5131",
         "description": "Essa lixeira você pode depositar vidros, com exceção:",
@@ -37,14 +37,13 @@
         "throwable": [
             "https://1965.cdn.simplo7.net/static/1965/sku/145718605173035.jpg",
             "https://img.elo7.com.br/product/zoom/30D16BB/52-bolinhas-de-gude-mix-7-modelos-diferentes-binoculos.jpg",
-            "https://franquiaempresa.com/wp-content/uploads/2010/05/vidro-temperado.jpg",
             "https://a1.vnda.com.br/950x/invictaonline/2018/02/15/101528011807-pote-de-vidro-liso-1-3l-azul-petroleo-1113.jpg?1518724450",
             "http://www.regiaonline.com/wp-content/uploads/2019/07/hqdefault.jpg"
         ]
     },
     {
         "id": 3,
-        "name": "Amarelo",
+        "name": "Amarela",
         "next": "Azul",
         "canColor": "#E2C031",
         "stripColor": "#D4AE32",
@@ -67,7 +66,7 @@
     {
         "id": 4,
         "name": "Azul",
-        "next": "Preto",
+        "next": "Preta",
         "canColor": "#145AA8",
         "stripColor": "#0A3361",
         "description": "Essa lixeira você pode depositar papeis e papelão, com exceção:",
@@ -85,22 +84,24 @@
     },
     {
         "id": 5,
-        "name": "Preto",
+        "name": "Preta",
         "next": "Laranja",
         "canColor": "#111",
         "stripColor": "#000",
-        "description": "Essa lixeira você pode depositar APENAS modeira",
+        "description": "Essa lixeira você pode depositar APENAS madeira",
+        "cannotThrow": [],
         "throwable": [
             "https://img.elo7.com.br/product/zoom/2A7446C/kit-10-ripas-madeira-pinus-crua-artesanato-45-cm-x-5-cm-ripas-madeira-pinus-crua-artesanato.jpg"
         ]
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Laranja",
-        "next": "Branco",
-        "canColor": "#111",
-        "stripColor": "#000",
+        "next": "Branca",
+        "canColor": "#e58e32",
+        "stripColor": "#a05709",
         "description": "Essa lixeira você pode depositar resíduos perigosos",
+        "cannotThrow": [],
         "throwable": [
             "https://a-static.mlcdn.com.br/618x463/bateria-de-carro-moura-60ah-12v-polo-positivo/adelmo/969051f47a9511ea98ce4201ac18501e/59568d33f55099432b529ab005793581.jpg",
             "https://lojaespacoinfo.com.br/wp-content/uploads/2018/08/Pilhas-panasonic-aa-600x600.jpg",
@@ -110,12 +111,13 @@
         ]
     },
     {
-        "id": 6,
-        "name": "Branco",
-        "next": "Roxo",
-        "canColor": "#f2f2f2",
-        "stripColor": "#999",
-        "description": "Essa lixeira você pode depositar resíduos hospitalares",
+        "id": 7,
+        "name": "Branca",
+        "next": "Roxa",
+        "canColor": "#dbdbdb",
+        "stripColor": "#8e8e8e",
+        "description": "Esse tipo de lixeira é usada apenas para resíduos hospitalares",
+        "cannotThrow": [],
         "throwable": [
             "https://www.portalbueno.com.br/uploads/cache/16-03-2018-045849-480-690x460-1486db12-portalbueno.webp",
             "https://drogariasp.vteximg.com.br/arquivos/ids/172317-1000-1000/7891463006455.JPG.jpg?v=635651395746570000",
@@ -125,34 +127,37 @@
         ]
     },
     {
-        "id": 7,
-        "name": "Roxo",
+        "id": 8,
+        "name": "Roxa",
         "next": "Marrom",
-        "canColor": "#111",
-        "stripColor": "#000",
-        "description": "Essa lixeira você pode depositar apenas resíduos radioativos como: lixo radioativo biológico, rejeitos líquidos, gasosos, sólidos e etc"
+        "canColor": "#a330c9",
+        "stripColor": "#6b0f89",
+        "description": "Essa lixeira você pode depositar apenas resíduos radioativos como: lixo radioativo biológico, rejeitos líquidos, gasosos, sólidos e etc",
+        "cannotThrow": [],
+        "throwable": []
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "Marrom",
         "next": "Cinza",
-        "canColor": "#111",
-        "stripColor": "#000",
+        "canColor": "#562f1c",
+        "stripColor": "#3a2013",
         "description": "Essa lixeira você pode depositar apenas resíduos orgânicos",
+        "cannotThrow": [],
         "throwable": [
             "https://www.translix.com.br/wp-content/uploads/2020/04/unnamed.jpg",
             "https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia14027/compostagem-lixo-organico-artigos-cursos-cpt.jpg"
         ]
     },
     {
-        "id": 9,
+        "id": 10,
         "name": "Cinza",
-        "next": "Vermelho",
-        "canColor": "#999",
-        "stripColor": "#555",
+        "next": "Vermelha",
+        "canColor": "#707070",
+        "stripColor": "#3d3d3d",
         "description": "Essa lixeira você pode depositar apenas resíduos não reciclável",
+        "cannotThrow": [],
         "throwable": [
-            "https://lh3.googleusercontent.com/proxy/OxkFb9gSKbq0lgJoLzIMDaxCUcoPjq52YWgLS4lIJAJYf3l4_J9-4sk1O9OpVbX9OalZOQ0BKHqaFeu7gIuAeyDsgE_SfF5CYXiYcqRkNDBYOC0RdMOZqUZbT0O-Eje1kkL1",
             "https://telhanorte.vteximg.com.br/arquivos/ids/300526-NaN-NaN/Suporte-para-rolo-de-papel-higienico-com-ventosas-aco-cromado-Arthi.jpg?v=636645292494600000",
             "https://degam.com.br/wp-content/uploads/2018/12/PAPEL-TOALHA-iStock-521037284.jpg",
             "https://images.freeimages.com/images/large-previews/74e/cigarette-butt-1309819.jpg"

@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-grow: 0;
 
     width: 70vw;
     height: 100vh;
@@ -24,7 +25,8 @@
 }
 
 .Modal__wrapperInfo{
-    margin-left: 5%;
+    margin-left: 20px;
+    width: 50%;
 }
 
 .Modal__wrapperInfo h2{
@@ -62,6 +64,19 @@
     color: white;
 }
 
+.Modal__wrapperInfo small{
+    margin: 13% 0 1% 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1rem;
+
+    color: white;
+}
+
 .Modal__exceptions li{
     font-family: 'Roboto', sans-serif;;
     font-weight: lighter;
@@ -95,8 +110,29 @@
 
     outline: none;
     border-width: 5px;
-    border-color: #222A30;
+    border-color: white;
     
-    background-color: #FFC629;
     cursor: pointer;
+}
+
+.Modal__canThrow{
+    display: flex;
+    flex-direction: row;
+}
+
+.Modal__images{
+    width: 80px;
+    height: 80px;
+
+    margin: 0 3px 0 3px;
+    z-index: 1000000;
+    transition: 0.5s;
+}
+
+.Modal__images:hover{
+    width: 200px;
+    height: 200px;
+    
+    z-index: 1000000;
+    transition: 0.5s;
 }
