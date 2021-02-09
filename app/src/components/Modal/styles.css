@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
+@import './animation.css';
 
 .Modal__container {
     position: absolute;
@@ -22,6 +23,15 @@
     height: 100vh;
     
     background-color: #222A30;
+    animation: showLeft 0.8s 0s normal forwards;
+}
+
+.Modal__left .TrashCan__Wrapper, .Modal__wrapperInfo{
+    animation: showCan 2s 0s normal forwards;
+}
+
+.Modal__change .TrashCan__Wrapper{
+    animation: modalChange 2s 0s normal forwards;
 }
 
 .Modal__wrapperInfo{
@@ -94,6 +104,7 @@
     height: 100vh;
 
     background-color: #628862;
+    animation: showRight 0.8s 0s normal forwards;
 }
 
 .Modal__right button{

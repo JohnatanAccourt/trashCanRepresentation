@@ -18,6 +18,7 @@ import './styles.css';
 export default function MainComponent(){
     const [modal, setModal] = useState(false);
     const [item, setItem] = useState({});
+    const [canChange, setCanChange] = useState(false);
 
     const apresentationalCans = cans.slice(0,4);
 
@@ -35,7 +36,7 @@ export default function MainComponent(){
         <div>
             {modal ?
                 <ModalComponent 
-                    onClick={() => nextCan()}
+                    onClick={() => [setTimeout(() => {nextCan()}, 1000), setCanChange(!canChange)]}
                     closeModal={() => setModal(false)}
                     can={item}
                     trashColor={item.name}
@@ -44,6 +45,7 @@ export default function MainComponent(){
                     stripColor={item.stripColor}
                     canColor={item.canColor}
                     images={item.throwable}
+                    canChange={canChange}
                 />:
                 <></>
             }
@@ -69,18 +71,18 @@ export default function MainComponent(){
             </div>
 
             <footer className="Main__footer">
-                <a href="http://" className="Main__mapInfo" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.google.com/maps/d/edit?mid=1FwgYP95R7cz_LF6n5u1o6BOuxXs&ie=UTF8&oe=UTF8&msa=0&ll=-24.190769712964773%2C-46.141814000000004&z=8" className="Main__mapInfo" target="_blank" rel="noopener noreferrer">
                     <Location style={{color: '#5286C0', fontSize: '2rem'}} />
                     <p>Através desse link, você pode se informar sobre os pontos de reciclagem.</p>
                 </a>
                 <div className="Main__social">
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <a href="mailto:johnatan1999accourt@gmail.com" target="_blank" rel="noopener noreferrer">
                         <Email style={{color: '#913834', fontSize: '2rem'}} />
                     </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/JohnatanAccourt" target="_blank" rel="noopener noreferrer">
                         <IoLogoGithub style={{color: '#FFC629', fontSize: '2rem'}} />
                     </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/johnatan-accourt-93937a19a/" target="_blank" rel="noopener noreferrer">
                         <IoLogoLinkedin style={{color: '#5286C0', fontSize: '2rem'}} />
                     </a>
                 </div>

@@ -18,10 +18,12 @@ export default function ModalComponent(
         stripColor,
         canColor,
         can,
-        images
+        images,
+        canChange
     }
 ){
     const [canItem, setCan] = React.useState([]);
+    // const [canChange, setCanChange] = React.useState(false);
 
     React.useEffect(() => {
         const result = cans.filter(index => index.name === can.next);
@@ -30,8 +32,8 @@ export default function ModalComponent(
 
     return(
         <div className="Modal__container">
-            <Close onClick={closeModal} style={{color: 'white', fontSize: '4rem', position: 'absolute', top: 5, right: 5}} />
-            <article className="Modal__left">
+            <Close onClick={closeModal} style={{color: 'white', fontSize: '4rem', position: 'absolute', top: 5, right: 5, zIndex: 100}} />
+            <article className={ canChange ? "Modal__left" : "Modal__left Modal__change"}>
                 <TrashCanComponent
                     height={700} width={450} marginLeft={-120}
                     canColor={canColor} stripColor={stripColor}

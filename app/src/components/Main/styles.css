@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
+@import './animation.css';
 
 .Main__content{
     display: flex;
@@ -22,6 +23,7 @@
 
     color: white;
     user-select: none;
+    animation: showTitle 1.5s 0s normal forwards;
 }
 
 .Main__cans{
@@ -47,6 +49,7 @@
     right: 0;
     left: 0;
 
+    animation: showBottom 1.5s 0s normal forwards;
 }
 
 .Main__sugestion4user{
@@ -55,6 +58,7 @@
     align-items: center;
     
     z-index: 2;
+    animation: easeAnimation 5.5s 0s ease-in infinite;
 }
 
 .Main__sugestion4user strong {

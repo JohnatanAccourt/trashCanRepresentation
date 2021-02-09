@@ -1,0 +1,15 @@
+@keyframes easeAnimation{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes showBottom{
+    from{bottom: -100%}
+    to{bottom: 0%}
+}
+
+@keyframes showTitle{
+    from{transform: translateY(-100%);}
+    to{transform: translateY(0%);}
+}
