@@ -19,25 +19,30 @@ export default function ModalComponent(
         canColor,
         can,
         images,
-        canChange
+        canChange,
+        count
     }
 ){
     const [canItem, setCan] = React.useState([]);
-    // const [canChange, setCanChange] = React.useState(false);
+    const [counter, setCounter] = React.useState(0);
 
     React.useEffect(() => {
         const result = cans.filter(index => index.name === can.next);
         setCan(result[0]);
+        setCounter(counter + count);
     },[canColor])
+    
 
     return(
         <div className="Modal__container">
             <Close onClick={closeModal} style={{color: 'white', fontSize: '4rem', position: 'absolute', top: 5, right: 5, zIndex: 100}} />
-            <article className={ canChange ? "Modal__left" : "Modal__left Modal__change"}>
-                <TrashCanComponent
-                    height={700} width={450} marginLeft={-120}
-                    canColor={canColor} stripColor={stripColor}
-                />
+            <article className="Modal__left">
+                <div className={ canChange ? `${counter === 1 ? 'modal' : 'Modal__trashAnima'}` : "Modal__trashAnimaChange"}>
+                    <TrashCanComponent
+                        height={700} width={450} marginLeft={-120}
+                        canColor={canColor} stripColor={stripColor}
+                    />
+                </div>
                 <div className="Modal__wrapperInfo">
                     <h2>Lixeira</h2>
                     <strong style={{color: canColor}}>{trashColor}</strong>

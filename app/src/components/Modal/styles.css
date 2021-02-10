@@ -26,13 +26,14 @@
     animation: showLeft 0.8s 0s normal forwards;
 }
 
-.Modal__left .TrashCan__Wrapper, .Modal__wrapperInfo{
+.Modal__trashAnima{
     animation: showCan 2s 0s normal forwards;
 }
 
-.Modal__change .TrashCan__Wrapper{
+.Modal__trashAnimaChange{
     animation: modalChange 2s 0s normal forwards;
 }
+
 
 .Modal__wrapperInfo{
     margin-left: 20px;

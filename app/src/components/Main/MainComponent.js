@@ -18,13 +18,14 @@ import './styles.css';
 export default function MainComponent(){
     const [modal, setModal] = useState(false);
     const [item, setItem] = useState({});
-    const [canChange, setCanChange] = useState(false);
+    const [canChange, setCanChange] = useState(true);
+    const [counter] = React.useState(0);
 
     const apresentationalCans = cans.slice(0,4);
 
     function handleModal(can){
-        setModal(true);
-        setItem(can);
+            setModal(true);
+            setItem(can);
     }
     
     function nextCan(){
@@ -46,6 +47,7 @@ export default function MainComponent(){
                     canColor={item.canColor}
                     images={item.throwable}
                     canChange={canChange}
+                    count={counter + 1}
                 />:
                 <></>
             }
