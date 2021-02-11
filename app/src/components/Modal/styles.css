@@ -26,6 +26,19 @@
     animation: showLeft 0.8s 0s normal forwards;
 }
 
+.Modal--leftClosed{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 0;
+
+    width: 70vw;
+    height: 100vh;
+    
+    background-color: #222A30;
+    animation: backwordsLeft 0.8s 0s normal forwards;
+}
+
 .Modal__trashAnima{
     animation: showCan 2s 0s normal forwards;
 }
@@ -106,6 +119,18 @@
 
     background-color: #628862;
     animation: showRight 0.8s 0s normal forwards;
+}
+
+.Modal--rightClosed{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 30vw;
+    height: 100vh;
+
+    background-color: #628862;
+    animation: backwordsRight 0.8s 0s normal forwards;
 }
 
 .Modal__right button{

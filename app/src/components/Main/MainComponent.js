@@ -19,26 +19,40 @@ export default function MainComponent(){
     const [modal, setModal] = useState(false);
     const [item, setItem] = useState({});
     const [canChange, setCanChange] = useState(true);
-    const [counter] = React.useState(0);
+    const [counter, setCounter] = React.useState(0);
+    const [closeModalAnimation, setCloseModalAnimation] = useState(false);
 
     const apresentationalCans = cans.slice(0,4);
-
-    function handleModal(can){
-            setModal(true);
-            setItem(can);
-    }
     
     function nextCan(){
         const result = cans.filter(index => index.name === item.next);
         setItem(result[0]);
     }
 
+    function onChangeCan(){
+        setTimeout(() => { nextCan() }, 1000); 
+        setCanChange(!canChange);
+    }
+    
+    function handleModal(can){
+        setModal(true);
+        setItem(can);
+        
+        setCloseModalAnimation(true);
+    }
+
+    function onCloseModal(){
+        setTimeout(() => { setModal(false); }, 1000);
+
+        setCloseModalAnimation(false);
+    }
+
     return(
         <div>
             {modal ?
-                <ModalComponent 
-                    onClick={() => [setTimeout(() => {nextCan()}, 1000), setCanChange(!canChange)]}
-                    closeModal={() => setModal(false)}
+                <ModalComponent
+                    onClick={() => onChangeCan()}
+                    closeModal={() => onCloseModal()}
                     can={item}
                     trashColor={item.name}
                     description={item.description}
@@ -48,6 +62,7 @@ export default function MainComponent(){
                     images={item.throwable}
                     canChange={canChange}
                     count={counter + 1}
+                    closed={closeModalAnimation}
                 />:
                 <></>
             }

@@ -20,7 +20,8 @@ export default function ModalComponent(
         can,
         images,
         canChange,
-        count
+        count,
+        closed
     }
 ){
     const [canItem, setCan] = React.useState([]);
@@ -30,13 +31,14 @@ export default function ModalComponent(
         const result = cans.filter(index => index.name === can.next);
         setCan(result[0]);
         setCounter(counter + count);
+        console.log(closed);
     },[canColor])
     
 
     return(
         <div className="Modal__container">
             <Close onClick={closeModal} style={{color: 'white', fontSize: '4rem', position: 'absolute', top: 5, right: 5, zIndex: 100}} />
-            <article className="Modal__left">
+            <article className={closed ? "Modal__left" : "Modal--leftClosed"}>
                 <div className={ canChange ? `${counter === 1 ? 'modal' : 'Modal__trashAnima'}` : "Modal__trashAnimaChange"}>
                     <TrashCanComponent
                         height={700} width={450} marginLeft={-120}
@@ -68,7 +70,7 @@ export default function ModalComponent(
                     </section>
                 </div>
             </article>
-            <section className="Modal__right">
+            <section className={closed ? "Modal__right" : "Modal--rightClosed"}>
                 <button onClick={onClick} style={{ backgroundColor: canItem.canColor }}>
                     <ArrowRight style={{color: 'white', fontSize: '5rem'}} />
                 </button>
